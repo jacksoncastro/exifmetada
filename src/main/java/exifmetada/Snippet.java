@@ -59,8 +59,7 @@ public class Snippet {
 		ByteArrayOutputStream baos = new ByteArrayOutputStream();
 		ImageOutputStream stream = ImageIO.createImageOutputStream(baos);
 		writer.setOutput(stream);
-		writer.write(metadata, new IIOImage(buffImg, null, metadata),
-				writeParam);
+		writer.write(metadata, new IIOImage(buffImg, null, metadata), writeParam);
 		stream.close();
 
 		return baos.toByteArray();
@@ -149,19 +148,25 @@ public class Snippet {
 	}
 	
 	public static void main(String[] args) {
-		Snippet example = new Snippet();
-		try {
-			byte[] bytes = example.writeCustomData(ImageIO.read(new File("/home/jackson/Imagens/teste.png")), "teste","teste23|sadas");
-			example.save(bytes);
-			example.reader("/home/jackson/Imagens/teste2.png");
-		} catch (ImageReadException e) {
-			e.printStackTrace();
-		} catch (ImageWriteException e) {
-			e.printStackTrace();
-		} catch (IOException e) {
-			e.printStackTrace();
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+//		Snippet example = new Snippet();
+//		try {
+//			byte[] bytes = example.writeCustomData(ImageIO.read(new File("/home/jackson/Imagens/teste.png")), "teste","teste23|sadas");
+//			example.save(bytes);
+//			example.reader("/home/jackson/Imagens/teste2.png");
+//		} catch (ImageReadException e) {
+//			e.printStackTrace();
+//		} catch (ImageWriteException e) {
+//			e.printStackTrace();
+//		} catch (IOException e) {
+//			e.printStackTrace();
+//		} catch (Exception e) {
+//			e.printStackTrace();
+//		}
+		
+		for (int i = -10; i<10; i++) {
+			  if ( i%2 == 0 )
+			    continue;
+			  System.out.println(i);
+			}
 	}
 }

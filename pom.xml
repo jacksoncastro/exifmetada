@@ -23,6 +23,14 @@
 			<scope>system</scope>
 			<systemPath>${project.basedir}/src/main/resources/lib/jai_imageio-1.1.jar</systemPath>
 		</dependency>
+		
+		<dependency>
+			<groupId>ae-awt</groupId>
+			<artifactId>ae-awt</artifactId>
+			<version>1.0</version>
+			<scope>system</scope>
+			<systemPath>${project.basedir}/src/main/resources/lib/ae-awt.jar</systemPath>
+		</dependency>
 
 		<dependency>
 			<groupId>ar.com.hjg</groupId>
